@@ -1,0 +1,32 @@
+count of requests are : 3
+open login page avrage responce time is : 1.2462967270002991
+sign up avrage responce time is : 0.8224063620000379
+view course avrage responce time is : 1.3626091130008717
+count of requests are : 3
+open login page avrage responce time is : 1.6717735370002629
+sign up avrage responce time is : 0.8196928899997147
+view course avrage responce time is : 1.3164193379998324
+19/08/2020
+count of requests are : 3
+open login page avrage responce time is : 1.5028905369999848
+sign up avrage responce time is : 0.6425101009990613
+view course avrage responce time is : 1.2966900249994069
+
+19/08/2020
+count of requests are : 3
+open login page avrage responce time is : 1.4207903839997016
+sign up avrage responce time is : 0.6395961109992641
+view course avrage responce time is : 1.2950823060000403
+
+19/08/2020
+count of requests are : 3
+open login page avrage responce time is : 1.66
+sign up avrage responce time is : 0.65
+view course avrage responce time is : 1.27
+
+19/08/2020 15:06:17
+count of requests are : 3
+open login page avrage responce time is : 1.09
+sign up avrage responce time is : 0.64
+view course avrage responce time is : 1.33
+

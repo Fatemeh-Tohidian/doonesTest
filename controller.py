@@ -1,4 +1,4 @@
-# from user import activate
+from datetime import datetime
 import aiohttp
 import asyncio
 import multiprocessing
@@ -38,7 +38,7 @@ async def view_course(session):
 async def main(i):
    import time
    name = "user"+str(i)
-   mobile = "0988791"+str(i).zfill(4)
+   mobile = "0988795"+str(i).zfill(4)
    password = mobile
    async with aiohttp.ClientSession() as session:
 
@@ -61,12 +61,26 @@ async def main(i):
     print(f"{i}view_course finished in {elapsed:0.2f} seconds")
 
 async def start():
- await asyncio.gather(*(main(i) for i in range(5000) ))    
+ await asyncio.gather(*(main(i) for i in range(1) ))    
 
 if __name__ == "__main__":
     counter = 0
-    asyncio.run(start())
-    print(f"open login page avrage responce time is : {statistics.mean(open_login_rt)}")
-    print(f"sign up avrage responce time is : {statistics.mean(sign_up_rt)}")
-    print(f"view course avrage responce time is : {statistics.mean(view_course_rt)}")
+    file = open("log.txt", "a")
+    file.write(datetime.now().strftime("%d/%m/%Y %H:%M:%S")+"\n")
+    try:
+        asyncio.run(start())
+    except expression as identifier:
+        print(identifier)
+        file.write("an error occurred\n")
+    finally:
+        print(f"open login page avrage responce time is : {statistics.mean(open_login_rt):0.2f}")
+        print(f"sign up avrage responce time is : {statistics.mean(sign_up_rt):0.2f}")
+        print(f"view course avrage responce time is : {statistics.mean(view_course_rt):0.2f}")
+        file.write(f"count of requests are : "+str(counter)+"\n")
+        file.write(f"open login page avrage responce time is : {statistics.mean(open_login_rt):0.2f}\n")
+        file.write(f"sign up avrage responce time is : {statistics.mean(sign_up_rt):0.2f}\n")
+        file.write(f"view course avrage responce time is : {statistics.mean(view_course_rt):0.2f}\n")
+        file.write("\n")
+        file.close()
+    
     
